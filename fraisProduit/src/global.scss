@@ -25,6 +25,27 @@
 @import "@ionic/angular/css/text-transformation.css";
 @import "@ionic/angular/css/flex-utils.css";
 
+
+*{
+    font-family: Gilroy;
+}
+
+ion-searchbar{
+    .searchbar-input-container{
+        input{
+            padding-top: 14px !important;
+            padding-bottom: 12px !important;
+            font-size: 18px !important;
+        }
+
+        .searchbar-seaerch-icon{
+            top: 15px !important;
+            width: 25px;
+            height: 25px;
+        }
+    }
+}
+
 /**
  * Ionic Dark Mode
  * -----------------------------------------------------

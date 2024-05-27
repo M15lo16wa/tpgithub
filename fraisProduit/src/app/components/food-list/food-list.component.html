@@ -1,0 +1,12 @@
+<div class="list" (click)="clicked.emit()">
+  <ion-img [src]="item.image"></ion-img>
+
+  <div class="liste-title">
+    <h3 class="tilte">{{item.title}}</h3>
+    <h2 class="subtilte"><sup>f</sup>{{item.price|number:'1.2'}}</h2>
+    
+    <ion-button>
+      <ion-icon slot="icon-only" name="add"></ion-icon>
+    </ion-button>
+  </div>
+</div>

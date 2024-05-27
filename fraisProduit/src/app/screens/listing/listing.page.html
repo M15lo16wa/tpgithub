@@ -1,0 +1,22 @@
+<ion-content>
+  <!--header-->
+  <div class="header">
+    <h1 class="header-en-tete"><strong>P</strong>lan d'achat</h1>
+    <div class="logo">
+      <ion-img src="../../../../assets/icon/logofrais.jpg"></ion-img>
+    </div>
+  </div>
+  <!--barresearch-->
+  <ion-searchbar></ion-searchbar>
+
+  <!--categorie de produit-->
+  <div class="categorie">
+    <app-category-item *ngFor="let item of categories" [item]="item" (clicked)="goToCartPage"></app-category-item>
+  </div>
+  <!--produit-->
+  <h1 class="list-header">Produits frais</h1>
+  <div class="du-frais" >
+    <app-food-list *ngFor="let produit of Produits" [item]="produit" (clicked)="goToDetailPage(produit.id)"></app-food-list>
+  </div>
+</ion-content>
+
