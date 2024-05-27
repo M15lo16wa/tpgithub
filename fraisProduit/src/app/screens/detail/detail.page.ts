@@ -11,13 +11,16 @@ import { frais } from 'src/app/models/food.model';
 export class DetailPage implements OnInit {
   id!: number;
   produits!:frais;
-    constructor(private activeRoute: ActivatedRoute, private produit:CategoryProduit) {
-    const idParam = this.activeRoute.snapshot.paramMap.get('id');
-    this.id = idParam ? parseInt(idParam, 10) : 0;
+    constructor(private ActivatedRoute: ActivatedRoute, private categoryProduit: CategoryProduit) {
+    const idParam = this.ActivatedRoute.snapshot.paramMap.get('id');
+    if (idParam !== null) {
+      this.id = +idParam;
+      this.produits = this.categoryProduit.getCategorieById(this.id);
+    }
   }
   ngOnInit() {
     /*this.produit.getCategorie(this.id);*/
-    this.produit.getCategorie();
+    this.produits.getCategorie(this.id);
   }
 
 }

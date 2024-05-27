@@ -16,7 +16,7 @@
   <!--produit-->
   <h1 class="list-header">Produits frais</h1>
   <div class="du-frais" >
-    <app-food-list *ngFor="let produit of Produits" [item]="produit" (clicked)="goToDetailPage(produit.id)"></app-food-list>
+    <app-food-list *ngFor="let item of Produits" [item]="item" (clicked)="goToDetailPage(item.id)"></app-food-list>
   </div>
 </ion-content>
 

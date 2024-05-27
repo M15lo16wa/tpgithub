@@ -6,7 +6,6 @@ import { DetailPageRoutingModule } from './detail-routing.module';
 import { DetailPage } from './detail.page';
 
 import { BadgeModule } from 'src/app/components/badge/badge.module';
-import { CategoryItemModule } from 'src/app/components/category-item/category-item.module';
 
 @NgModule({
   imports: [
@@ -15,7 +14,6 @@ import { CategoryItemModule } from 'src/app/components/category-item/category-it
     IonicModule,
     DetailPageRoutingModule,
     BadgeModule,
-    CategoryItemModule
   ],
   declarations: [DetailPage]
 })
