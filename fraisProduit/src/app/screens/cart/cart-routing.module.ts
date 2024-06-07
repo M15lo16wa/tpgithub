@@ -6,7 +6,18 @@ import { CartPage } from './cart.page';
 const routes: Routes = [
   {
     path: '',
-    component: CartPage
+    component: CartPage,
+    // children:[
+    //   {
+    //     path:'cartIem',
+    //     loadChildren: () => import('../../components/cart-item/cart-item.module').then((m) => m.CartItemModule)
+    //   },
+    //   {
+    //     path:'',
+    //     redirectTo:'cartItem',
+    //     pathMatch: 'full'
+    //   }
+    // ]
   }
 ];
 

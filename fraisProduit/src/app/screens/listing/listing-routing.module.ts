@@ -9,7 +9,10 @@ const routes: Routes = [
     path: '',
     component: ListingPage
   },
-  { path: 'detail/:id', component: DetailPage },
+  { 
+    path: 'detail/:id',
+    component: DetailPage
+  }
 ];
 
 @NgModule({

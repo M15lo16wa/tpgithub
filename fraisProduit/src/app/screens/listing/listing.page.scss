@@ -1,6 +1,6 @@
 ion-content{
-  --padding-start:2rem;
-  --padding-end: 2rem;
+  --padding-start:1rem;
+  --padding-end: 1rem;
   .header{
     display: flex;
     justify-content: space-between;
@@ -11,21 +11,21 @@ ion-content{
     .header-en-tete{
       font-size: 3rem;
       font-weight: 600;
-      color: #40a0a9;
+      color: #286469;
       margin: 0;
     }
 
     .logo{
-      width: 85px;
-      height: 85px;
+      width: 80px;
+      height: 80px;
       border-radius: 100%;
       display: flex-end;
       justify-content: center;
       overflow: hidden;
 
       ion-img{
-        width: 100%;
-        height: 100%;
+        width: 99%;
+        height: 99%;
       }
     }
   }
@@ -33,12 +33,12 @@ ion-content{
   .categorie{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-gap: 1rem;
+    grid-gap: 0.1rem;
   }
 
   .list-header{
     font-weight: 700;
-    color: rgb(77, 151, 29);
+    color: rgb(58, 109, 24);
     font-size: 1.8rem;
     margin-bottom: 1.6rem;
     margin-top:2.5rem;
@@ -47,7 +47,7 @@ ion-content{
   .du-frais{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-gap:1rem;
+    grid-gap:0.1rem;
   }
 }
 ion-content{

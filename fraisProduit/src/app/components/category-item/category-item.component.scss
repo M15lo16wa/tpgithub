@@ -6,7 +6,7 @@
 
     .image-card{
         background: color #f3f3f3;
-        padding: 0.8rem;
+        padding: 0.6rem;
         border-radius: 1.5rem;
         margin-bottom: 0.5rem;
 
@@ -16,13 +16,13 @@
     }
 
     p{
-        color: #5f1515;
+        color: #241414;
     }
 }
 
 .wrapper.active{
     .image-card{
-        background-color: #5f1515;
+        background-color: #4d0c0c;
     }
 
     p{

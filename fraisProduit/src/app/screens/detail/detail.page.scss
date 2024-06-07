@@ -1,5 +1,5 @@
 ion-content{
-    --background:#323544;
+    --background:#96c3eacc;
     position: relative;
 
     .header{
@@ -19,7 +19,7 @@ ion-content{
     .list{
         height: 75%;
         width: 100%;
-        background:#a0aeb9;
+        background:#92bcdc;
         position: absolute;
         bottom:0;
         border-radius: 3rem 3rem 0 0;
@@ -48,7 +48,7 @@ ion-content{
             p{
                 font-size: 2.2rem;
                 font-weight:700;
-                color:#17A589;
+                color:#021511;
 
                 sup{
                     font-size: 1.2rem;
@@ -73,7 +73,7 @@ ion-content{
             p{
                 font-size:1.1rem;
                 line-height: 1.6rem;
-                color: #323544;
+                color: #1a1c23;
             }
         }
     }

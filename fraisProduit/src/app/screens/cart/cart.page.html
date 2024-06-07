@@ -1,9 +1,42 @@
-<ion-header>
+<<ion-content>
+  <h3 *ngIf="(Item | async) as cartItems">
+    {{cartItems.length}} le contenu du Panier
+  </h3>
+  <app-cart-item *ngIf="Item | async as items"></app-cart-item>
+  <ion-button (click)="clearCart()">Vider le panier</ion-button>
+</ion-content>
+
+
+<!-- <ion-header>
   <ion-toolbar>
-    <ion-title>panier</ion-title>
+    <ion-title>Panier</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <app-cart ></app-cart>
-</ion-content>
+  <ion-list>
+    <ion-item *ngFor="let item of Item | async">
+      <ion-thumbnail slot="start">
+        <img [src]="item.image" alt="Image de l'article">
+      </ion-thumbnail>
+      <ion-label>
+        <h2>{{ item.title }}</h2>
+        <p>Prix unitaire: {{ item.price }}</p>
+        <p>Quantité: {{ item.quantity }}</p>
+      </ion-label> -->
+      <!-- <ion-button slot="end" (click)="removeFromCart(item)">Retirer</ion-button> -->
+    <!-- </ion-item>
+  </ion-list> -->
+
+  <!-- Total du panier -->
+  <!--<p>Total: {{ getTotal() }}</p>-->
+
+  <!-- Bouton pour vider le panier -->
+  <!--<ion-button (click)="clearCart()">Vider le panier</ion-button>-->
+<!-- </ion-content> -->
+
+<!-- <ion-content>
+  <h3>{{(Item|async)}}panier</h3> 
+  ajout produit panier
+  <app-cart-item></app-cart-item>
+</ion-content> -->

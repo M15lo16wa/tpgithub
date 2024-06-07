@@ -1,0 +1,13 @@
+<ion-list>
+    <ion-item *ngFor="let item of Item | async">
+      <ion-thumbnail slot="start">
+        <img [src]="item.image" alt="Image de l'article" class="image">
+      </ion-thumbnail>
+      <ion-label class="description">
+        <h2>{{ item.title }}</h2>
+        <p>Prix unitaire: <sup></sup>{{ item.price }}</p>
+        <p>Quantité: {{ item.quantity }}</p>
+      </ion-label>
+      <ion-button slot="end">Retirer</ion-button>
+    </ion-item>
+  </ion-list>

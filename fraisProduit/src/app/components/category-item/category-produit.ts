@@ -9,30 +9,51 @@ export class CategoryProduit {
         {
             id: 1,
             title: 'tom',
-            image: '../../../../assets/icon/menu9.jpg',
+            image: '../../../../assets/icon/plat.jpeg',
             price: 123,
             description: 'produit de mer',
             getCategorie: function (id: number): frais {
+                throw new Error("Function not implemented.");
+            },
+            quantity: 0,
+            getValue: function (): unknown {
+                throw new Error("Function not implemented.");
+            },
+            reduce: function (arg0: (i: any, j: any) => any, arg1: number): unknown {
                 throw new Error("Function not implemented.");
             }
         },
         {
             id: 2,
             title: 'carpe',
-            image: '../../../../assets/icon/menu8.jpg',
+            image: '../../../../assets/icon/plat.jpeg',
             price: 456,
             description: 'produit de rivière',
             getCategorie: function (id: number): frais {
+                throw new Error("Function not implemented.");
+            },
+            quantity: 0,
+            getValue: function (): unknown {
+                throw new Error("Function not implemented.");
+            },
+            reduce: function (arg0: (i: any, j: any) => any, arg1: number): unknown {
                 throw new Error("Function not implemented.");
             }
         },
         {
             id: 3,
             title: 'crabe',
-            image: '../../../../assets/icon/menu7.jpg',
+            image: '../../../../assets/icon/plat.jpeg',
             price: 789,
             description: 'produit de mer',
             getCategorie: function (id: number): frais {
+                throw new Error("Function not implemented.");
+            },
+            quantity: 1,
+            getValue: function (): unknown {
+                throw new Error("Function not implemented.");
+            },
+            reduce: function (arg0: (i: any, j: any) => any, arg1: number): unknown {
                 throw new Error("Function not implemented.");
             }
         },
@@ -44,8 +65,49 @@ export class CategoryProduit {
             description: 'produit de la terre',
             getCategorie: function (id: number): frais {
                 throw new Error("Function not implemented.");
+            },
+            quantity: 1,
+            getValue: function (): unknown {
+                throw new Error("Function not implemented.");
+            },
+            reduce: function (arg0: (i: any, j: any) => any, arg1: number): unknown {
+                throw new Error("Function not implemented.");
             }
-        }
+        },
+        {
+            id: 5,
+            title: 'legumes',
+            image: '../../../../assets/icon/plat.jpeg',
+            price: 321,
+            description: 'produit de la terre',
+            getCategorie: function (id: number): frais {
+                throw new Error("Function not implemented.");
+            },
+            quantity: 1,
+            getValue: function (): unknown {
+                throw new Error("Function not implemented.");
+            },
+            reduce: function (arg0: (i: any, j: any) => any, arg1: number): unknown {
+                throw new Error("Function not implemented.");
+            }
+        },
+        {
+            id: 6,
+            title: 'legumes',
+            image: '../../../../assets/icon/plat.jpeg',
+            price: 321,
+            description: 'produit de la terre',
+            getCategorie: function (id: number): frais {
+                throw new Error("Function not implemented.");
+            },
+            quantity: 1,
+            getValue: function (): unknown {
+                throw new Error("Function not implemented.");
+            },
+            reduce: function (arg0: (i: any, j: any) => any, arg1: number): unknown {
+                throw new Error("Function not implemented.");
+            }
+        },
     ];
 
     getCategorie(): frais[] {
