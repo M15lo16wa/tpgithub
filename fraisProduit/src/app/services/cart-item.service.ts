@@ -20,20 +20,26 @@ export class CartService {
     }
 
     addToCart(newItem: CartItem) {
-        this.items$.next([...this.items$.getValue(), newItem]);
-        console.log('le service:',this.items$);
+        // verifiant si l'element avec le meme id existe dans la liste
+        const existingItemIndex = this.cartItems.findIndex(item => item.id === newItem.id);
+        if (existingItemIndex !== -1) {
+            // si l'item exists, on increment la quantité est on met à jour le prix
+            const existingItem = this.cartItems[existingItemIndex];
+            existingItem.quantity += newItem.quantity;
+            existingItem.price += newItem.price * newItem.quantity;
+        } else {
+            // si l'item n'exist pas, on l'ajout dans le panier
+            this.cartItems.push(newItem);
+        }
+        this.items$.next(this.cartItems);
+        console.log('le service:', this.items$);
+        // this.items$.next([...this.items$.getValue(), newItem]);
+        // console.log('le service:',this.items$);
     }
 
-    // getCart() {
-    //     return this.items$.asObservable();
-    // }
-
-    // removeItem(id: number) {
-    //     const updatedItems = this.items$.getValue().filter(item => item.id !== id);
-    //     this.items$.next(updatedItems);
-    // }
-
-    // clearCart() {
-    //     this.items$.next([]);
-    // }
+    //suppression d'un element dans le panier
+    removeFromCart(item: CartItem) {
+        this.cartItems = this.cartItems.filter(cartItem => cartItem.id !== item.id);
+        this.items$.next(this.cartItems);
+    }
 }

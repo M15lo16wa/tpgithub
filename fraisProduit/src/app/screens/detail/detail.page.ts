@@ -61,12 +61,12 @@ export class DetailPage implements OnInit {
     toast.present();
   }
 
-  navigateToHome(): void {
+  navigateToHome() {
     this.location.back();
 
     // this.router.navigate(['']);
   }
-  navigateToPage(): void {
+  navigateToPage() {
     this.location.back();
 
     // this.router.navigate(['']);

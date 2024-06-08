@@ -1,9 +1,21 @@
-<<ion-content>
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Panier</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-buttons slot="start">
+      <ion-button (click)="navigateToRecu()">
+        <ion-icon slot="icon-only" color="light" name="arrow-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
   <h3 *ngIf="(Item | async) as cartItems">
     {{cartItems.length}} le contenu du Panier
   </h3>
   <app-cart-item *ngIf="Item | async as items"></app-cart-item>
   <ion-button (click)="clearCart()">Vider le panier</ion-button>
+  <ion-button (click)="navigateToRecu()">Voir le reçu</ion-button>
 </ion-content>
 
 

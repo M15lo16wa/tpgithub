@@ -5,9 +5,9 @@
       </ion-thumbnail>
       <ion-label class="description">
         <h2>{{ item.title }}</h2>
-        <p>Prix unitaire: <sup></sup>{{ item.price }}</p>
+        <p>Prix unitaire: <sup>f</sup>{{ item.price }}</p>
         <p>Quantité: {{ item.quantity }}</p>
       </ion-label>
-      <ion-button slot="end">Retirer</ion-button>
+      <ion-button slot="end" (click)="removeItem(item)">Retirer</ion-button>
     </ion-item>
   </ion-list>

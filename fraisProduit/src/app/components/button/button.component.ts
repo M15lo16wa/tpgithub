@@ -1,8 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
+
 import { CartItem } from 'src/app/models/cart-item.model';
 import { frais } from 'src/app/models/food.model';
-import { CartService } from 'src/app/services/cart-item.service';
-
 @Component({
   selector: 'app-button',
   templateUrl: './button.component.html',
@@ -11,7 +10,7 @@ import { CartService } from 'src/app/services/cart-item.service';
 export class ButtonComponent implements OnInit {
   @Input() newItem!: frais;
 
-  constructor(private cartService: CartService) { }
+  constructor() { }
 
   ngOnInit() {
     this.newItem;

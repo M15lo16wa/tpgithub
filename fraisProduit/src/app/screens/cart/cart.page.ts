@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
+import { Location } from '@angular/common';
 
 import { CartItem } from 'src/app/models/cart-item.model';
 import { CartService } from 'src/app/services/cart-item.service';
@@ -12,16 +13,13 @@ import { CartService } from 'src/app/services/cart-item.service';
 
 export class CartPage implements OnInit {
   Item!: Observable<CartItem[]>;
-
-  //items: frais[] = [];
-  constructor(private cartService: CartService) {}
+  constructor(private cartService: CartService,private location: Location) {}
 
   ngOnInit() {
     this.Item = this.cartService.getCart();
-    // /*this.items = this.cartService.getCart();*/
-    // console.log('contenu panier:',this.Item);
   }
 
+  // on effectue la somme du prix de produit selectionné et icremente la quantité du produit
   getTotal() {
     let total = 0;
     this.Item.subscribe(items => {
@@ -34,7 +32,7 @@ export class CartPage implements OnInit {
     this.cartService.clearCart();
     this.Item = this.cartService.clearCart(); // Videz le panier en utilisant la méthode clearCart du service CartService
   }
-  /*getTotal() {
-  return this.cartItem$.reduce((total, item) => total + item.price * item.quantity, 0);
-  }*/
+  navigateToRecu(){
+    this.location.back();
+  }
 }
